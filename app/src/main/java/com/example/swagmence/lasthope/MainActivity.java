@@ -3,9 +3,6 @@ package com.example.swagmence.lasthope;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -16,10 +13,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import org.json.JSONArray;
 import org.json.JSONException;
-
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -41,13 +37,20 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        LocationWeatherApi weather = new LocationWeatherApi(this);
+        LocationWeatherApi weather = new LocationWeatherApi();
+        weather.execute();
         String orig_string = getString(R.string.temperatura);
         TextView textView = findViewById(R.id.textView2);
         String to_set = "Temperatura Lá Fora(São Paulo): Falha ao Obter";
         try {
-            to_set = orig_string + weather.jo.getJSONObject("consolidated_weather").getJSONObject("0").getString("the_temp");
+            JSONArray array = weather.jo.getJSONArray("consolidated_weather");
+            JSONObject object = array.getJSONObject(0);
+            double temp = object.getDouble("the_temp");
+            //to_set = orig_string + weather.jo.getJSONObject("consolidated_weather").getJSONObject("0").getString("the_temp");
+            to_set = orig_string + String.valueOf(temp);
         } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e){
             e.printStackTrace();
         }
         textView.setText(to_set);

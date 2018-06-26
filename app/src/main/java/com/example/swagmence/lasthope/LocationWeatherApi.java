@@ -1,6 +1,6 @@
 package com.example.swagmence.lasthope;
 
-import android.content.Context;
+import android.os.AsyncTask;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -12,12 +12,12 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class LocationWeatherApi{
-
+public class LocationWeatherApi extends AsyncTask<Void, Void, Void>{
 
     JSONObject jo;
 
-    LocationWeatherApi(Context context){
+    @Override
+    protected Void doInBackground(Void... voids) {
         {
             try {
                 jo = (JSONObject) new JSONTokener(IOUtils.toString(new URL("https://www.metaweather.com/api/location/455827"))).nextValue();
@@ -29,6 +29,6 @@ public class LocationWeatherApi{
                 e.printStackTrace();
             }
         }
+        return null;
     }
-
 }
