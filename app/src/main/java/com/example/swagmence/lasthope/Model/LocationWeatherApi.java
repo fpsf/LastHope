@@ -1,4 +1,4 @@
-package com.example.swagmence.lasthope;
+package com.example.swagmence.lasthope.Model;
 
 import android.os.AsyncTask;
 
@@ -14,7 +14,7 @@ import java.net.URL;
 
 public class LocationWeatherApi extends AsyncTask<Void, Void, Void>{
 
-    JSONObject jo;
+    public JSONObject jo;
 
     @Override
     protected Void doInBackground(Void... voids) {

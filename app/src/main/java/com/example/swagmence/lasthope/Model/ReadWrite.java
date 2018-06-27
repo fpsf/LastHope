@@ -1,4 +1,4 @@
-package com.example.swagmence.lasthope;
+package com.example.swagmence.lasthope.Model;
 
 import android.content.Context;
 import android.util.Log;
@@ -10,7 +10,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-class ReadWrite {
+public class ReadWrite {
 
     // WRITE:
     public static void writeToFile(String data,Context context) {

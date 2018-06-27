@@ -1,4 +1,4 @@
-package com.example.swagmence.lasthope;
+package com.example.swagmence.lasthope.Controller;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import com.example.swagmence.lasthope.Model.LocationWeatherApi;
+import com.example.swagmence.lasthope.Model.ReadWrite;
+import com.example.swagmence.lasthope.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

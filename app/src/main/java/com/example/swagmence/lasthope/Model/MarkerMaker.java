@@ -1,4 +1,4 @@
-package com.example.swagmence.lasthope;
+package com.example.swagmence.lasthope.Model;
 
 import android.location.Address;
 
@@ -8,7 +8,7 @@ import java.util.Locale;
 
 public class MarkerMaker {
 
-    double[][] markers = new double[][]{};
+    public double[][] markers = new double[][]{};
 
     public void make_marker(int titles){
         switch(titles){

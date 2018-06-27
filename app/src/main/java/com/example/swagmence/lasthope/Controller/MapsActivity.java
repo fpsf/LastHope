@@ -1,19 +1,18 @@
-package com.example.swagmence.lasthope;
+package com.example.swagmence.lasthope.Controller;
 
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
+import com.example.swagmence.lasthope.Model.MarkerMaker;
+import com.example.swagmence.lasthope.Model.ReadWrite;
+import com.example.swagmence.lasthope.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
