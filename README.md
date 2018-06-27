@@ -5,7 +5,7 @@ Aplicativo Para Obtenção de Temperatura Climática e Obtenção de Países com
 ![Fernando Passacantilli Silva Ferrari](https://github.com/fpsf)
 
 ### Diagrama de Classes:
-<img src="https://github.com/fpsf/LastHope/blob/master/diag/Last_Hope.jpg" width="250">
+<img src="https://github.com/fpsf/LastHope/blob/master/diag/Last_Hope.jpg">
 
 ### Snapshots:
 <img src="https://github.com/fpsf/LastHope/blob/master/snaps/Captura%20de%20tela%20em%202018-06-26%2022-52-10.png" width="250">
